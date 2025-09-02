@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <h1>Bridge Platform</h1>
+      <ul>
+        <li><a href="#investor">Investor</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero / Intro Section -->
+  <section class="hero">
+    <h2>Connecting Investors & Entrepreneurs</h2>
+    <p>This platform helps bridge the gap between people with money and people with ideas.</p>
+  </section>
+
+  <!-- Investor Section -->
+  <section id="investor" class="card">
+    <h3>For Investors</h3>
+    <p>See business proposals and share your investment plans.</p>
+    <button onclick="openForm('investor')">Register as Investor</button>
+  </section>
+
+  <!-- Business Section -->
+  <section id="business" class="card">
+    <h3>For Business People</h3>
+    <p>Post your startup idea and find investors for support.</p>
+    <button onclick="openForm('business')">Register as Business</button>
+  </section>
+
+  <!-- Register Form -->
+  <section id="register" class="form-container hidden">
+    <h3>Register</h3>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <select id="role">
+        <option value="investor">Investor</option>
+        <option value="business">Business Person</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- Login Form -->
+  <section id="login" class="form-container hidden">
+    <h3>Login</h3>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Proposal Form (Only visible after login) -->
+  <section id="proposal" class="form-container hidden">
+    <h3>Post Your Proposal</h3>
+    <form id="proposalForm">
+      <textarea id="ideaText" placeholder="Describe your idea or investment plan..." required></textarea>
+      <button type="submit">Post Proposal</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bridge Platform Project</p>
+  </footer>
+
+  <!-- Firebase Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+
+  <!-- My JS File -->
+  <script src="script.js"></script>
+</body>
+</html>
